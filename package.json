@@ -1,0 +1,24 @@
+{
+  "name": "galaxy-classifier-api-valentina",
+  "version": "1.0.0",
+  "description": "image conversion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina.git"
+  },
+  "keywords": [
+    "node",
+    "grpc",
+    "sharp"
+  ],
+  "author": "rcvt, vmma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina/issues"
+  },
+  "homepage": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina#readme"
+}
