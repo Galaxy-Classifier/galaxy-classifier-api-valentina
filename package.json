@@ -27,6 +27,7 @@
   "dependencies": {
     "@grpc/grpc-js": "1.0.3",
     "@grpc/proto-loader": "0.5.4",
-    "sharp": "0.25.2"
+    "sharp": "0.25.2",
+    "winston": "3.2.1"
   }
 }
