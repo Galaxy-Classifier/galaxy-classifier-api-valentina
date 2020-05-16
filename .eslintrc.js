@@ -15,5 +15,6 @@ module.exports = {
     ecmaVersion: 11,
   },
   rules: {
+    'no-restricted-syntax': 'off'
   },
 };

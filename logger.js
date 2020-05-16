@@ -1,3 +1,4 @@
+const path = require('path');
 const {
   createLogger,
   transports,
@@ -11,11 +12,10 @@ const {
 const { name, version } = require('./package.json');
 
 const logFormat = printf(({
-  level, message, lbl, tstamp,
-}) => (`${tstamp} | [${lbl}]::${level} => ${message}`));
+  level, message, label: lbl, timestamp: tstamp,
+}) => (`${tstamp} | [${lbl}]::${level}  => ${message}`));
 
 const logger = createLogger({
-  level: 2,
   format: combine(
     label({ label: `${name}:${version}` }),
     timestamp(),
@@ -23,7 +23,7 @@ const logger = createLogger({
   ),
   transports: [
     new transports.Console(),
-    new transports.File(`${name}.logs`),
+    new transports.File({ filename: path.join(__dirname, `${name}.logs`) }),
   ],
 });
 

@@ -1,0 +1,19 @@
+syntax = 'proto3';
+
+package valentina;
+
+service Valentina {
+    rpc Resize (TransformMessage) returns (TransformMessage) {};
+}
+
+message TransformMessage {
+  repeated Image imageRequest = 1;
+}
+
+/*
+  Specifies the incoming transform request from Pedro
+*/
+message Image {
+    string id = 1;
+    bytes chunk_data = 2;
+}
