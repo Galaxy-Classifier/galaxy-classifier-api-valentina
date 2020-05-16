@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "image conversion",
   "main": "index.js",
+  "engines": {
+    "node": "12.6.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node start.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina/issues"
   },
-  "homepage": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina#readme"
+  "homepage": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "1.0.3",
+    "@grpc/proto-loader": "0.5.4",
+    "sharp": "0.25.2"
+  }
 }
