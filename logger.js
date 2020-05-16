@@ -1,19 +1,30 @@
-const { createLogger, format: { printf, combine, timestamp, label } } = require('winston');
+const {
+  createLogger,
+  transports,
+  format: {
+    printf,
+    combine,
+    timestamp,
+    label,
+  },
+} = require('winston');
 const { name, version } = require('./package.json');
 
-const logFormat = printf(({ level, message, label, timestamp }) => (`${timestamp} | [${label}]::${level} => ${message}`));
+const logFormat = printf(({
+  level, message, lbl, tstamp,
+}) => (`${tstamp} | [${lbl}]::${level} => ${message}`));
 
 const logger = createLogger({
   level: 2,
-  format: combine (
+  format: combine(
     label({ label: `${name}:${version}` }),
     timestamp(),
-    logFormat
+    logFormat,
   ),
   transports: [
-    new winston.transports.Console(),
-    new winston.transports.File(`${name}.logs`),
-  ]
+    new transports.Console(),
+    new transports.File(`${name}.logs`),
+  ],
 });
 
 module.exports = logger;
