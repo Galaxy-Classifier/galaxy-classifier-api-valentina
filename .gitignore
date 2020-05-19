@@ -103,3 +103,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ecosystem file, ask team members for it
+ecosystem.config.js

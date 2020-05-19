@@ -7,7 +7,7 @@
     "node": "12.6.3"
   },
   "scripts": {
-    "test": "node start.js"
+    "start": "pm2 start ecosystem.config.js --no-daemon"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina#readme",
   "dependencies": {
-    "@grpc/grpc-js": "1.0.3",
     "@grpc/proto-loader": "0.5.4",
+    "grpc": "1.24.2",
     "sharp": "0.25.2",
     "winston": "3.2.1"
   },
