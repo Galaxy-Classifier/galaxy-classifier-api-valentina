@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Galaxy-Classifier/galaxy-classifier-api-valentina#readme",
   "dependencies": {
-    "@grpc/grpc-js": "1.0.3",
+    "@grpc/grpc-js": "1.1.8",
     "@grpc/proto-loader": "0.5.4",
     "sharp": "0.25.2",
     "winston": "3.2.1"
